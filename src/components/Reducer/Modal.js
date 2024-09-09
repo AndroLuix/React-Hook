@@ -7,8 +7,8 @@ const Modal = ({ modalContent, isModalOpen, closeModal }) => {
     <>
       {isModalOpen && (
         <div className="modal fade show" style={{ display: 'block' }} tabIndex="-1">
-          <div className="modal-dialog">
-            <div className="modal-content">
+          <div className="modal-dialog" style={{ maxWidth: '70%' }} >
+            <div className="modal-content" >
               <div className="modal-header">
                 <h5 className="modal-title">Modal</h5>
                 <button
