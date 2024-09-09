@@ -1,6 +1,4 @@
-import React from 'react';
-import { refCode } from './refCode';
-import CodeBlock from '../Tools/CodeBlock';
+const refCode = `import React from 'react';
 
 const UseRefExample = () => {
   const ref = React.useRef(null);
@@ -39,10 +37,11 @@ const UseRefExample = () => {
 
       <div style={{ height: '100vh' }}></div>
       <h3 ref={ref} onClick={handleScrollTop}>Torna Sopra</h3>
-      <CodeBlock code={refCode}/>
       <div style={{ height: '30vh' }}></div>
     </>
   );
 };
 
 export default UseRefExample;
+`
+export {refCode}

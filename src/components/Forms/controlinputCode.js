@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import {CODEControll} from './controlinputCode'
-import CodeBlock from '../Tools/CodeBlock'
+const CODEControll = `import React, { useEffect, useState } from 'react'
 
 const ControlledInputComponent = () => {
 
@@ -43,10 +41,8 @@ const ControlledInputComponent = () => {
                     {persone.map((p)=>(
                         <li key={p.id}>Nome: {p.nome} - Email: {p.email} - Cell: {p.cell}</li>
                        
-                    ))}
+                    ))};
                 </ul>
-
-                <CodeBlock code={CODEControll} />
             </div>
         )
     }
@@ -91,4 +87,6 @@ const ControlledInputComponent = () => {
     )
 }
 
-export default ControlledInputComponent
+export default ControlledInputComponent`
+
+export {CODEControll}

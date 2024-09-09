@@ -6,16 +6,20 @@ import {
     APRI_MODAL, CHIUDI_MODAL
 } from './actions';
 
+import {CODE} from './useReduceCode';
+import CodeBlock from '../Tools/CodeBlock';
+
+
 const initialState = {
     isModalOpen: false,
-    modalContent: 'Eccomi, sono un modal',
+    modalContent: <CodeBlock code={CODE}/>,
 };
 
 const UserReducerComponents = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     const apriModal = () => {
-        dispatch({ type: APRI_MODAL , payload:'message of modal'});
+        dispatch({ type: APRI_MODAL , payload:<CodeBlock code={CODE}/>});
     };
 
     const chiudiModal = () =>{

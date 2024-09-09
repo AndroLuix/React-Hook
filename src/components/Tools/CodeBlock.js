@@ -18,7 +18,7 @@ const CodeBlock = ({ code }) => {
     };
 
     return (
-        <div style={{ position: 'relative', marginBottom: '20px' }}>
+        <div className='p-5' style={{ position: 'relative', marginBottom: '20px' }}>
         
             <button 
                 onClick={copyToClipboard} 
