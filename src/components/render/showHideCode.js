@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import CodeBlock from '../Tools/CodeBlock';
-import { CODE } from './showHideCode';
+const CODE = `import React, { useEffect, useState } from 'react'
 
 const ShowHide = () => {
 
@@ -36,11 +34,9 @@ const Elemento = () => {
     return (
         <div>
             <h3>Count {count}</h3>
-            <CodeBlock code={CODE}/>
-
         </div>
-
     )
 }
 
-export default ShowHide
+export default ShowHide`
+export {CODE}

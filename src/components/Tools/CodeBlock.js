@@ -3,13 +3,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Tema scuro
 
 const CodeBlock = ({ code }) => {
-    const [copied, setCopied] = useState(false); // Stato per la notifica di copia
+    const [copied, setCopied] = useState(false); 
 
     // Funzione per copiare il codice nella clipboard
     const copyToClipboard = () => {
         navigator.clipboard.writeText(code)
             .then(() => {
-                setCopied(true); // Imposta lo stato a "copiato"
+                setCopied(true); 
                 setTimeout(() => setCopied(false), 2000); // Ripristina dopo 2 secondi
             })
             .catch(err => {

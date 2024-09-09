@@ -19,7 +19,7 @@ function App() {
 
   return (
     <section className="container d-flex justify-content-center flex-column gap-5 py-5">
-      {renderSection('Mostra Sez. 1', 'sezione1', visibleSection, toggleSection,
+      {renderSection('Mostra Sez. 1 - Conditional Componing - Short Render - Hode or Show Component', 'sezione1', visibleSection, toggleSection,
         <>
           <First />
           <ShortRender />
@@ -27,23 +27,23 @@ function App() {
         </>
       )}
 
-      {renderSection('Mostra Sez. 2', 'sezione2', visibleSection, toggleSection,
+      {renderSection('Mostra Sez. 2 Controll Input Component', 'sezione2', visibleSection, toggleSection,
         <ControlledInputComponent />
       )}
 
-      {renderSection('Mostra Sez. 3', 'sezione3', visibleSection, toggleSection,
+      {renderSection('Mostra Sez. 3 - UseRef', 'sezione3', visibleSection, toggleSection,
         <UseRefExample />
       )}
 
-      {renderSection('Mostra Sez. 4', 'sezione4', visibleSection, toggleSection,
+      {renderSection('Mostra Sez. 4 - Modal', 'sezione4', visibleSection, toggleSection,
         <UserReducerComponents />
       )}
 
-      {renderSection('Mostra Sez. 5', 'sezione5', visibleSection, toggleSection,
+      {renderSection('Mostra Sez. 5 - List ', 'sezione5', visibleSection, toggleSection,
         <MainComponent />
       )}
 
-      {renderSection('Mostra Sez. 6', 'sezione6', visibleSection, toggleSection,
+      {renderSection('Mostra Sez. 6 - List con UseContext', 'sezione6', visibleSection, toggleSection,
         <ContextSolution />
       )}
     </section>

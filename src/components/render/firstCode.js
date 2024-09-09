@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+const CODE = `import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {CODE} from './firstCode'
-import CodeBlock from '../Tools/CodeBlock';
 
 const url = "https://api.github.com/users/QuincyLarson";
 
@@ -36,15 +34,16 @@ const First = () => {
     }
     return (
         <div>
-            <h2 className='text-center'>Conditional Compining - API AXIOS</h2>
+            <h2 className='text-center'>Conditional Compining</h2>
             <div className='card d-flex align-items-center p-5 shadow mt-5'>
                 <h3>{user.login}</h3>  {/* Renderizza il nome utente */}
                 <img className='object-fit p-4 rounded' src={user.avatar_url} alt={user.login} style={{width:'200px'}}/>  {/* Mostra l'immagine dell'avatar */}
                 <p>{user.bio}</p>  {/* Mostra la biografia */}
-                <CodeBlock code={CODE} />
             </div>
         </div>
     )
 }
 
-export default First
+export default First`
+
+export {CODE}
