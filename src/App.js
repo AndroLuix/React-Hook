@@ -10,10 +10,11 @@ import UserReducerComponents from './components/Reducer/UserReducerComponents';
 import MainComponent from './components/PropDrilling/MainComponent';
 import ContextSolution from './components/Context/ContextSolution';
 import FetchComponents from './components/CostumHook/FetchComponents';
+import PropComponents from './components/PropTypes/PropComponents';
 
 
 function App() {
-  document.title ='React Hook';
+  document.title = 'React Hook';
 
   const [visibleSection, setVisibleSection] = useState('');
 
@@ -51,8 +52,12 @@ function App() {
         <ContextSolution />
       )}
 
-{renderSection(' Sez. 7 - Custom Hooks (fetch)', 'sezione7', visibleSection, toggleSection,
+      {renderSection(' Sez. 7 - Custom Hooks (fetch)', 'sezione7', visibleSection, toggleSection,
         <FetchComponents />
+      )}
+
+      {renderSection(' Sez. 8 - Prop Types', 'sezione8', visibleSection, toggleSection,
+        <PropComponents />
       )}
     </section>
   );

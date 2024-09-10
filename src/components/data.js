@@ -28,32 +28,32 @@ export const data = [
       id: "attcvDDMikF6G2iNi",
       image: {
         url:
-          "https://dl.airtable.com/.attachments/14ac9e946e1a02eb9ce7d632c83f742f/4fd98e64/product-1.jpeg",
+          "https://picsum.photos/200/300?random=2",
       },
-      nome: "divano bello",
+      nome: "Bella",
       prezzo: 50.45,
     },
     {
       id: "attP2cUyxU35M1zbw",
       image: {
         url:
-          "https://dl.airtable.com/.attachments/f3450755e165557344f7d6433242431e/93533098/product-1.jpeg",
+          "https://picsum.photos/200/300?random=3",
       },
-      name: "cosa carina",
+      name: "Lorem Picsum",
       prezzo: 70.45,
     },
     {
       id: "attIieysyB9zQmQo9",
       image: {
         url:
-          "https://dl.airtable.com/.attachments/f292eaec4fea8a791b037c759ae559c9/2d5e34d5/product-4.jpeg",
+          "https://picsum.photos/200/300?random=1",
       },
-      nome: "cosa brutta",
+      nome: "What is",
       prezzo: 99.99,
     },
     {
       id: "attcvDDMikF6G2ifi",
-      nome: "divano bello",
+      nome: "Photo - No Img",
     },
   ];
   

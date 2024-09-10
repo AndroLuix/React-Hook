@@ -8,8 +8,8 @@ const url = "https://jsonplaceholder.typicode.com/users";
 const postUrl = "https://jsonplaceholder.typicode.com/posts";
 
 const FetchComponents = () => {
-  const [showCode, setShowCode] = useState(true);
-  const [list, setList] = useState(false); // true: mostra GET, false: mostra POST
+  const [showCode, setShowCode] = useState(false);
+  const [list, setList] = useState(true); // true: mostra GET, false: mostra POST
 
   return (
     <div>
