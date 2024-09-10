@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import HomePage from './screen/Home';
+import HomePage from './screen/HomePage';
 import Profile from './screen/Profile';
 import About from './screen/About';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ErrorPage from './screen/ErrorPage';
 
 
 const NavBarRoute = () => {
@@ -21,20 +21,17 @@ const NavBarRoute = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
-              </li>
+             
               <li className="nav-item">
                 <Link className="nav-link" to="/profile">Profile</Link>
               </li>
             </ul>
             <ul className="navbar-nav ms-auto">
               <Link className='nav-link' target='_blank' to="https://www.linkedin.com/in/luigi-iadicola/">
-              Linedin
-              <FontAwesomeIcon icon="fa-brands fa-linkedin-in" />
-                            </Link>
+                Linedin
+              </Link>
               <Link className='nav-link' target='_blank' to='https://iadicola.netsons.org/'>
-              Portfolio
+                About Me
               </Link>
             </ul>
           </div>
@@ -47,6 +44,7 @@ const NavBarRoute = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<About />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='*' element={<ErrorPage/>} />
       </Routes>
     </BrowserRouter>
   );
