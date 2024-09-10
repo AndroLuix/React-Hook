@@ -1,4 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import './App.css';
 import First from './components/render/First';
 import ShortRender from './components/render/ShortRender';
@@ -11,6 +15,7 @@ import MainComponent from './components/PropDrilling/MainComponent';
 import ContextSolution from './components/Context/ContextSolution';
 import FetchComponents from './components/CostumHook/FetchComponents';
 import PropComponents from './components/PropTypes/PropComponents';
+import NavBarRoute from './components/ReactRoute-v6/NavBarRoute';
 
 
 function App() {
@@ -23,6 +28,8 @@ function App() {
   };
 
   return (
+   <>
+   <NavBarRoute/>
     <section className="container d-flex justify-content-center flex-column gap-5 py-5">
       {renderSection(' Sez. 1 - Conditional Componing - Short Render - Hode or Show Component', 'sezione1', visibleSection, toggleSection,
         <>
@@ -59,7 +66,10 @@ function App() {
       {renderSection(' Sez. 8 - Prop Types', 'sezione8', visibleSection, toggleSection,
         <PropComponents />
       )}
+
+
     </section>
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ const PropComponents = () => {
 
     return (
         <>
-            <div className='d-flex flex-row gap-5 wrap justify-content-center bg-dark py-5'>
+            <div className='d-flex flex-row gap-5 wrap justify-content-center bg-dark py- mt-5'>
 
                 {
                     datiIncompleti.map(el => {
@@ -51,8 +51,8 @@ Prodotto.propTypes = {
 
 Prodotto.defaultProps = {
 
-    nome: 'Dear...',
-    prezzo: 17.99,
+    nome: 'No Title',
+    prezzo: 'No Price',
     image: defaultImage,
 
 }
