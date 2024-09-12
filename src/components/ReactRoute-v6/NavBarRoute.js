@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './screen/HomePage';
 import Profile from './screen/Profile';
-import About from './screen/About';
 import ErrorPage from './screen/ErrorPage';
-
+import SingleProfile from './screen/SingleProfile';
+import MyProfile from './screen/MyProfile';
+import Category from './screen/Category';
+import { sections } from './screen/sections';
 
 const NavBarRoute = () => {
+/*   useEffect(() => {
+    // Questa funzione viene eseguita al montaggio del componente
+    sections.forEach(section => {
+      console.log(section.cat);
+      <li className="nav-item">
+                <Link className="nav-link" to="/cateogry/${section.cat}">Categoria {section.cat}</Link>
+              </li>
+    });
+  }, []); // L'array vuoto significa che l'effetto viene eseguito solo una volta al montaggio
+ */
   return (
     <BrowserRouter>
       {/* Navbar */}
@@ -21,33 +33,58 @@ const NavBarRoute = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
               </li>
-             
-              <li className="nav-item">
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorie
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {sections.map(section => (
+                    <li key={section.cat}>
+                      <Link className="dropdown-item" to={`/cateogry/${section.cat}`}>
+                        Categoria {section.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/profile">Profile</Link>
               </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to="/profile/1">Profile 1</Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to="/profile/me">My Profile</Link>
+              </li> */}
             </ul>
             <ul className="navbar-nav ms-auto">
-              <Link className='nav-link' target='_blank' to="https://www.linkedin.com/in/luigi-iadicola/">
-                Linedin
-              </Link>
-              <Link className='nav-link' target='_blank' to='https://iadicola.netsons.org/'>
-                About Me
-              </Link>
+              <li className='nav-item'>
+                <Link className='nav-link' target='_blank' to="https://www.linkedin.com/in/luigi-iadicola/">
+                  Linkedin
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link' target='_blank' to='https://iadicola.netsons.org/'>
+                  About Me
+                </Link>
+              </li>
             </ul>
           </div>
-
         </div>
       </nav>
 
       {/* Routes */}
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/cateogry/:cat' element={<Category />} />
         <Route path='/profile' element={<Profile />} />
-        <Route path='*' element={<ErrorPage/>} />
+        {/* Childer of profile */}
+        <Route path='/profile/:id' element={<SingleProfile />} />
+        <Route path='/profile/me' element={<MyProfile />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default NavBarRoute;
