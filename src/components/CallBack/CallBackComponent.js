@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import UseFetch from '../CostumHook/useFetch'
 
 
@@ -25,6 +25,13 @@ const Index = () => {
    */
   const [contatore, setContatore] = useState(0);
 
+  const [bannati, setBannati] = useState(0);
+
+  const addBannati = useCallback(()=>{
+    setBannati(bannati+1);
+  },[bannati]);
+  console.log(bannati);
+
   /**
    * Tiene Traccia del valore returnato da trovaMaggiore
    * Fino a quando data non Varia, restituisce sempre quel valore
@@ -44,7 +51,7 @@ const Index = () => {
       </div>
       <div style={{ width: "fit-content", margin: "auto" }}>
         {data.map((el) => {
-          return <Elenco key={el.id} {...el} />;
+          return <Elenco key={el.id} {...el} addBannati={addBannati} />;
         })}
       </div>
     </>
@@ -55,7 +62,7 @@ const Index = () => {
  * Il Componente è inserito all'interno di Memo, che controlla i valori all'interno del props
  * Se essi non variano il componente viene memorizzato e non subisce un nuovo Render
  */
-const Elenco = React.memo(({ avatar_url: image, login: name, id }) => {
+const Elenco = React.memo(({ avatar_url: image, login: name, id, addBannati }) => {
   return (
     <article className="card bg-white my-3 shadow-sm">
       <img
@@ -66,6 +73,8 @@ const Elenco = React.memo(({ avatar_url: image, login: name, id }) => {
       />
       <h5>id: {id}</h5>
       <h4>{name} </h4>
+
+ <button className="btn btn-danger btn-sm w-25 mx-auto m-3 fs-bold" onClick={addBannati}>Ban user</button>
     </article>
   );
 });

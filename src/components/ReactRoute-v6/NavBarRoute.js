@@ -9,16 +9,7 @@ import Category from './screen/Category';
 import { sections } from './screen/sections';
 
 const NavBarRoute = () => {
-/*   useEffect(() => {
-    // Questa funzione viene eseguita al montaggio del componente
-    sections.forEach(section => {
-      console.log(section.cat);
-      <li className="nav-item">
-                <Link className="nav-link" to="/cateogry/${section.cat}">Categoria {section.cat}</Link>
-              </li>
-    });
-  }, []); // L'array vuoto significa che l'effetto viene eseguito solo una volta al montaggio
- */
+
   return (
     <BrowserRouter>
       {/* Navbar */}
@@ -38,13 +29,17 @@ const NavBarRoute = () => {
                   Categorie
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  {sections.map(section => (
-                    <li key={section.cat}>
-                      <Link className="dropdown-item" to={`/cateogry/${section.cat}`}>
-                        Categoria {section.title}
-                      </Link>
-                    </li>
-                  ))}
+                  {sections.map(section => {
+                    console.log(section.cat);  
+                    return (
+                      <li key={section.cat}>
+                        <Link className="dropdown-item" to={`/category/${section.cat}`}>
+                          {section.title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+
                 </ul>
               </li>
               {/* <li className="nav-item">
@@ -76,7 +71,7 @@ const NavBarRoute = () => {
       {/* Routes */}
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/cateogry/:cat' element={<Category />} />
+        <Route path='/category/:cat' element={<Category />} />
         <Route path='/profile' element={<Profile />} />
         {/* Childer of profile */}
         <Route path='/profile/:id' element={<SingleProfile />} />

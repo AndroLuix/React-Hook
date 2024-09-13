@@ -5,15 +5,18 @@ import './App.css';
 
 import NavBarRoute from './components/ReactRoute-v6/NavBarRoute';
 import HomePage from './components/ReactRoute-v6/screen/HomePage';
+import { useEffect } from 'react';
 
 
 function App() {
-  document.title = 'React Hook - Luigi Iadicola';
-
+  
+  useEffect(() => {
+    document.title = 'React Hook - Luigi Iadicola';
+  }, [])
   return (
-   <>
+   
    <NavBarRoute/>
-   </>
+   
   );
 }
 

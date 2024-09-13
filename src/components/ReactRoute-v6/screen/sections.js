@@ -8,6 +8,10 @@ import MainComponent from '../../PropDrilling/MainComponent';
 import ContextSolution from '../../Context/ContextSolution';
 import FetchComponents from '../../CostumHook/FetchComponents';
 import PropComponents from '../../PropTypes/PropComponents';
+import ComponentMemo from '../../2-Memo/ComponentMemo';
+import CallBackComponent from '../../CallBack/CallBackComponent';
+import MainProductComponents from '../../ProductList/MainProductComponents';
+import DefrredComponent from '../../DeferredValue/Deferred';
 
 const sections = [
     { cat:1,
@@ -47,22 +51,48 @@ const sections = [
     },
     {
       cat:6,
-      title: 'Sez. 6 - List con UseContext',
+      title: '6 - List con UseContext',
       sectionKey: 'sezione6',
       content: <ContextSolution />,
     },
     {
       cat:7,
-      title: 'Sez. 7 - Custom Hooks (fetch)',
+      title: '7 - Custom your personal Hooks (fetch) - UseFetch Costumed',
       sectionKey: 'sezione7',
       content: <FetchComponents />,
     },
     {
       cat:8,
-      title: 'Sez. 8 - Prop Types',
+      title: '8 - Prop Types',
       sectionKey: 'sezione8',
       content: <PropComponents />,
     },
+    {
+      cat:9,
+      title:'9 - React Memo',
+      content:<ComponentMemo/> 
+
+    },
+    {
+      cat:10,
+      title: '10 - CallBack',
+      content: <CallBackComponent/>,
+    },
+    {
+      cat:11,
+      title: ' 11 OPTIMIZATION - SearchBar and Loading with useTransition ',
+      content: <MainProductComponents/>
+    },
+    {
+      cat:12,
+      title: ' 12 OPTIMIZATION - SearchBar and Loading with DeferredValue ',
+      content: <DefrredComponent/>
+    },
+    {
+      cat:13,
+      title: ' 12 Automation - Form List with UseId',
+      content: <DefrredComponent/>
+    },
   ];
 
-  export {sections}
+ export {sections}
