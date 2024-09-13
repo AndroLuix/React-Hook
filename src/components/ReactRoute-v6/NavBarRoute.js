@@ -68,7 +68,7 @@ const NavBarRoute = () => {
       </nav>
 
       {/* Routes */}
-      <Routes>
+      <Routes basename={process.env.PUBLIC_URL}>
         <Route path='/' element={<HomePage />} />
         <Route path='/category/:cat' element={<Category />} />
         <Route path='/profile' element={<Profile />} />
