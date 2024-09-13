@@ -1,6 +1,6 @@
+export const CODE =
+`
 import React, { useId, useState } from 'react';
-import CodeBlock from '../Tools/CodeBlock';
-import { CODE } from './code';
 
 const FormTextComponent = () => {
   const idName = useId();
@@ -13,7 +13,7 @@ const FormTextComponent = () => {
     consent: false,
   });
 
-  const [showCode, setCode] = useState(false);
+  const[showCode, setCode] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -26,9 +26,8 @@ const FormTextComponent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    setFormData({ fullname: '', email: '', consent: false });
-    setCode(true);
-
+    setFormData({fullname:'',email:'',consent:false});
+    
   };
 
   return (
@@ -83,16 +82,11 @@ const FormTextComponent = () => {
       <button type="submit" className="btn btn-primary w-100">
         Submit
       </button>
-
-      {
-        showCode ? <><CodeBlock code={CODE} /> <button 
-        className='btn btn-black w-25 mx-auto my-2 shadow'
-        onClick={()=> setCode(false)}
-        >Close</button></> : ''
-      }
-
+      
     </form>
   );
 };
 
 export default FormTextComponent;
+
+`

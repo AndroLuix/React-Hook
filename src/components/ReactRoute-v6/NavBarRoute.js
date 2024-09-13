@@ -30,7 +30,6 @@ const NavBarRoute = () => {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {sections.map(section => {
-                    console.log(section.cat);  
                     return (
                       <li key={section.cat}>
                         <Link className="dropdown-item" to={`/category/${section.cat}`}>

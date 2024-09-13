@@ -4,7 +4,6 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './App.css';
 
 import NavBarRoute from './components/ReactRoute-v6/NavBarRoute';
-import HomePage from './components/ReactRoute-v6/screen/HomePage';
 import { useEffect } from 'react';
 
 

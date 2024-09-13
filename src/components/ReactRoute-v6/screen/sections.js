@@ -12,10 +12,11 @@ import ComponentMemo from '../../2-Memo/ComponentMemo';
 import CallBackComponent from '../../CallBack/CallBackComponent';
 import MainProductComponents from '../../ProductList/MainProductComponents';
 import DefrredComponent from '../../DeferredValue/Deferred';
+import FormTextComponent from '../../IdCreate/FormTextComponent';
 
 const sections = [
     { cat:1,
-      title: 'Sez. 1 - Conditional Rendering - Short Render - Hide or Show Component',
+      title: '1 - Conditional Rendering - Short Render - Hide or Show Component',
       sectionKey: 'sezione1',
       content: (
         <>
@@ -27,25 +28,25 @@ const sections = [
     },
     {
       cat:2,
-      title: 'Sez. 2 - Controlled Input Component',
+      title: '2 - Controlled Input Component',
       sectionKey: 'sezione2',
       content: <ControlledInputComponent />,
     },
     {
       cat:3,
-      title: 'Sez. 3 - UseRef',
+      title: '3 - UseRef',
       sectionKey: 'sezione3',
       content: <UseRefExample />,
     },
     {
       cat:4,
-      title: 'Sez. 4 - Modal',
+      title: '4 - Modal',
       sectionKey: 'sezione4',
       content: <UserReducerComponents />,
     },
     {
       cat:5,
-      title: 'Sez. 5 - List',
+      title: '5 - List',
       sectionKey: 'sezione5',
       content: <MainComponent />,
     },
@@ -80,19 +81,20 @@ const sections = [
     },
     {
       cat:11,
-      title: ' 11 OPTIMIZATION - SearchBar and Loading with useTransition ',
+      title: '11 OPTIMIZATION - SearchBar and Loading with useTransition ',
       content: <MainProductComponents/>
     },
     {
       cat:12,
-      title: ' 12 OPTIMIZATION - SearchBar and Loading with DeferredValue ',
+      title: '12 OPTIMIZATION - SearchBar and Loading with DeferredValue ',
       content: <DefrredComponent/>
     },
     {
       cat:13,
-      title: ' 12 Automation - Form List with UseId',
-      content: <DefrredComponent/>
+      title: '13 Automation - Form List with UseId',
+      content: <FormTextComponent/>
     },
+
   ];
 
  export {sections}
