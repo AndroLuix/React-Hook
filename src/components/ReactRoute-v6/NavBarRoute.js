@@ -22,7 +22,7 @@ const NavBarRoute = () => {
           <div className="collapse justify-content-center navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/React-Hook">Home</Link>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
